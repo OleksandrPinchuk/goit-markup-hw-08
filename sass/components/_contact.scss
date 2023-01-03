@@ -1,7 +1,15 @@
 .contact {
     @extend %list;
-    display: flex;
     margin-left: auto;
+    
+    @media screen and (min-width: 1200px) {
+      display: inline-flex;
+      
+      & &__item + &__item{
+        margin-left: 50px;
+      }
+    }
+    
     
     &__link {
       display: inline-flex;
@@ -24,7 +32,10 @@
       margin-right: 10px;
       fill: currentColor;
     }
-    & &__item + &__item {
-      margin-left: 50px;
+    &__item:not(:last-child){
+      @media screen and (min-width: $tablet) {
+        display: block;
+        margin-bottom: 10px;
+      }
     }
   }

@@ -1,14 +1,26 @@
 .features {
     @extend %section;
+
+    @media screen and (max-width: $tablet) {
+        &__item:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        
+    }
     
     &__list {
         @extend %list;
-        display: flex;
-        justify-content: space-between;
     }
+
     &__item {
-        width: 270px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 450px;
     }
+    
     &__title {
         margin-top: 0;
         margin-bottom: 10px;
@@ -16,30 +28,34 @@
         font-size: 14px;
         line-height: 1.14;
         text-transform: uppercase;
+        text-align: center;
         
         &--hidden {
             @extend %--hidden;
         }
     }
+
     &__text {
         margin-top: 0;
         margin-bottom: 0;
         font-size: 14px;
         line-height: 1.71;
     }
+
     &__card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border-radius: 4px;
         margin-bottom: 30px;
         background-color: $secondary-background-color;
-        width: 270px;
         height: 120px;
+        padding-top: 25px;
     }
+
     &__icon {
+        display: block;
         width: 70px;
         height: 70px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
