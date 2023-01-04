@@ -10,7 +10,6 @@
       }
     }
     
-    
     &__link {
       display: inline-flex;
       align-items: center;
@@ -33,8 +32,7 @@
       fill: currentColor;
     }
     &__item:not(:last-child){
-      @media screen and (min-width: $tablet) {
-        display: block;
+      @media screen and (max-width: 1199px) {
         margin-bottom: 10px;
       }
     }
