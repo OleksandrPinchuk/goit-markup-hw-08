@@ -85,13 +85,29 @@
     }
 
     &__description {
-        display: inline-block;
+        display: block;
         padding: 20px 24px;
         width: 100%;
         border-bottom: 1px solid $border-description-portfolio;
         border-left: 1px solid $border-description-portfolio;
-        border-right: 1px solid $border-description-portfolio;
+        border-right: 1px solid $border-description-portfolio;        
     }
+
+    &__description:first-child {
+        @media screen and (min-width: $tablet) and (max-width: 1199px) {
+            padding: 20px 24px 56px;
+        }
+        
+    }
+    
+    .portfolio__item:first-child .portfolio__description {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            padding: 20px 24px 56px;
+        }
+    
+}
+
+    
 
     &__item:hover,
     &__item:focus {
