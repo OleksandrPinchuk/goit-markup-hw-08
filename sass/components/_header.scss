@@ -1,6 +1,14 @@
 .header {
     &__container {
+        display: flex;
+        align-items: center;
+
         @extend %container;
+
+        @media screen and (max-width: 767px) {
+            position: relative;
+            height: 60px;
+        }
 
         @media screen and (min-width: $tablet) {
         display: flex;
@@ -8,7 +16,7 @@
         justify-content: center;
         }
     }
-    }
+}
 
 .header-nav {
 
@@ -26,7 +34,6 @@
         }
     }
     
-
     &__link {
         
         color: $title-text-color;
@@ -62,9 +69,17 @@
     }    
     
 }
+
+.header-nav {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
 .header-nav__link.header-nav__link--current {
     color: $accent-color;
 }
+
 .header-nav__link.header-nav__link--current::after {
     @media screen and (min-width: $tablet) {
         content: "";

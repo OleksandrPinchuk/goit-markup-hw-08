@@ -1,3 +1,39 @@
+/*---------------- button mob-menu---------------- */
+.mob-menu-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    // width: 40px;
+    // height: 40px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        fill: $accent-color;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.mob-menu-button .icon-close {
+    display: none;
+}
+
+.mob-menu-button.is-open .icon-close {
+    display: block;
+}
+
+.mob-menu-button.is-open .icon-menu {
+    display: none;
+}
+/*---------------- button hero---------------- */
 .hero__button {
     display: inline-block;
     margin-top: 30px;
