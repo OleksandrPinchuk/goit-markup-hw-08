@@ -1,11 +1,13 @@
 html {
     box-sizing: border-box;
 }
+
 *,
 *::before,
 ::after {
     box-sizing: inherit;
 }
+
 .page {
     color: $primary-text-color;
     font-family: "roboto", sans-serif;
@@ -13,6 +15,9 @@ html {
     font-size: 16px;
     letter-spacing: 0.03em;
 }
+
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }

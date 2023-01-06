@@ -318,6 +318,8 @@ html {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -485,14 +487,18 @@ img {
   margin-right: auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #C4C4C4;
   color: #ffffff;
   text-align: center;
+}
+@media screen and (max-width: 479px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/mobile/hero.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/mobile/hero.jpg");
+  }
 }
 .hero__title {
   margin: 0 auto;
@@ -977,6 +983,7 @@ img {
   display: inline-block;
   text-decoration: none;
   height: 100%;
+  width: 100%;
 }
 @media screen and (max-width: 767px) {
   .portfolio__list {
