@@ -1,6 +1,10 @@
 .contact {
     @extend %list;
     margin-left: auto;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
     
     @media screen and (min-width: 1200px) {
       display: inline-flex;
@@ -22,6 +26,11 @@
       line-height: 1.14;
       letter-spacing: 0.02em;
 
+      @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        font-size: 12px;
+        line-height: 1.17;
+      }
+
       &:hover,
       &:focus {
         color: $accent-color;
@@ -38,8 +47,3 @@
     }
   }
 
-.contact {
-  @media screen and (max-width: 767px) {
-      display: none;
-  }
-}
