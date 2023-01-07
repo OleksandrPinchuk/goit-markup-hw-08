@@ -3,9 +3,7 @@
     position: absolute;
     top: 10px;
     right: 15px;
-    // width: 40px;
-    // height: 40px;
-    display: flex;
+    margin-left: auto;
     border: none;
     align-items: center;
     justify-content: center;
@@ -22,16 +20,25 @@
     }
 }
 
-.mob-menu-button .icon-close {
-    display: none;
-}
+.close-menu-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
 
-.mob-menu-button.is-open .icon-close {
-    display: block;
-}
+    &:focus,
+    &:hover {
+        fill: $accent-color;
+    }
 
-.mob-menu-button.is-open .icon-menu {
-    display: none;
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+
 }
 /*---------------- button hero---------------- */
 .hero__button {
